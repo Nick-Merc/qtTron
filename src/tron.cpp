@@ -1,4 +1,4 @@
-#include "Tron.hpp"
+..#include "Tron.hpp"
 
 Tron::Tron() {
 	RenderWindow newWindow("Tron Racer", 694, 745);
@@ -11,8 +11,8 @@ Tron::Tron() {
 		std::cout << "IMG_init has failed. Error: " << SDL_GetError() << std::endl;
 	}
 
-	char racerTexturePath[] = "C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronRacer.png";
-	char trail1TexturePath[] = "C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronRacerTrail.png";
+	char racerTexturePath[] = "..\\res\\gfx\\tronRacer.png";
+	char trail1TexturePath[] = "..\\res\\gfx\\tronRacerTrail.png";
 	char opponentTexturePath[] = "";
 	char trail2TexturePath[] = "";
 	racerTextures.push_back(window.loadTexture(racerTexturePath));
@@ -24,7 +24,7 @@ Tron::Tron() {
 	racer = Racer(694/2, 694, racerTextures[0], trailTextures[0]);
 	opponent = Opponent(694/2, 200, racerTextures[0], trailTextures[0]);
 
-	char backgroundTexturePath[] = "C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronBackground.png";
+	char backgroundTexturePath[] = "..\\res\\gfx\\tronBackground.png";
 	SDL_Texture* backgroundTexture = window.loadTexture(backgroundTexturePath);
 	Entity backgroundE(0, 0, 694, 745, backgroundTexture, 0);
 	background = Entity(0, 0, 694, 745, backgroundTexture, 0);
@@ -38,17 +38,17 @@ Tron::Tron() {
 		opponentTrailPositions.push_back(std::vector<int>());
 	}
 
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron0.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron1.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron2.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron3.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron4.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron5.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron6.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron7.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron8.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tron9.png"));
-	numberTextures.push_back(window.loadTexture("C:\\Users\\nrmer\\Desktop\\C++\\qtTron\\res\\gfx\\tronLetters\\tronBlank.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron0.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron1.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron2.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron3.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron4.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron5.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron6.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron7.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron8.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tron9.png"));
+	numberTextures.push_back(window.loadTexture("..\\res\\gfx\\tronLetters\\tronBlank.png"));
 }
 
 void Tron::renderScore() {
