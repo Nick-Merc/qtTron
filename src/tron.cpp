@@ -13,8 +13,7 @@ Tron::Tron() {
 
 	char racerTexturePath[] = "..\\res\\gfx\\tronRacer.png";
 	char trail1TexturePath[] = "..\\res\\gfx\\tronRacerTrail.png";
-	char opponentTexturePath[] = "";
-	char trail2TexturePath[] = "";
+
 	racerTextures.push_back(window.loadTexture(racerTexturePath));
 	trailTextures.push_back(window.loadTexture(trail1TexturePath));
 
